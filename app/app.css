@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply border border-gray-300 rounded-lg p-4 bg-white;
+}
+
+.btn {
+  @apply p-4 rounded-lg font-medium;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800;
+}

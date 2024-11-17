@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Records">
+    <ActionItem text="Logout" tap="{{ onLogout }}" ios.position="right" />
+    <ActionItem text="Add" tap="{{ onAddRecord }}" ios.position="right" />
+  </ActionBar>
+
+  <GridLayout rows="*, auto">
+    <ListView items="{{ records }}" itemTap="{{ onItemTap }}">
+      <ListView.itemTemplate>
+        <StackLayout class="p-2">
+          <Label text="{{ title }}" class="text-lg font-bold" />
+          <Label text="{{ description }}" class="text-gray-600" textWrap="true" />
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>

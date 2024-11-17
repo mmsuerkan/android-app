@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="{{ isEditing ? 'Edit Record' : 'New Record' }}" />
+  
+  <StackLayout class="p-4">
+    <TextField hint="Title" text="{{ title }}" class="input mb-4" />
+    <TextView hint="Description" text="{{ description }}" class="input mb-4" height="100" />
+    
+    <Button text="{{ isEditing ? 'Update' : 'Create' }}" tap="{{ onSave }}" class="btn btn-primary mb-2" />
+    <Label text="{{ errorMessage }}" class="text-red-500 text-center" textWrap="true" visibility="{{ errorMessage ? 'visible' : 'collapsed' }}" />
+  </StackLayout>
+</Page>
